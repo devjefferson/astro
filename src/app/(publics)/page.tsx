@@ -1,4 +1,4 @@
-"use client";
+
 import CountEvent from "@/components/CountEvent";
 import { Cta } from "@/components/Cta";
 import { Hero } from "@/components/Hero";
