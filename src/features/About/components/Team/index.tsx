@@ -1,39 +1,53 @@
+import { GithubIcon, LinkedinIcon } from "@/components/icons"
+
 const people = [
   {
     name: 'Jefferson Fonseca',
     role: 'Dev. Front-End',
     imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      'https://avatars.githubusercontent.com/devjefferson',
+      github: 'https://github.com/devjefferson',
+      linkedin: 'https://www.linkedin.com/in/devjefferson/'
   },
   {
     name: 'Kaylane Bastos',
     role: 'Dev. Front-End',
     imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      'https://avatars.githubusercontent.com/kaylanebaastos',
+      github: 'https://github.com/kaylanebaastos',
+      linkedin: 'https://www.linkedin.com/in/kaylanebaastos/'
   },
   {
-    name: 'Vitor',
+    name: 'Victor Hugo',
     role: 'Dev. Front-End',
     imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      'https://avatars.githubusercontent.com/vitoinacio',
+      github: 'https://github.com/vitoinacio',
+      linkedin: 'https://www.linkedin.com/in/victor-hugo-in%C3%A1cio-de-oliveira-93497a242'
   },
   {
-    name: 'Ana Beatriz',
+    name: 'Ana Beatriz Monteiro',
     role: 'Dev. Front-End',
     imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      'https://avatars.githubusercontent.com/beatizmonteiro',
+      github: 'https://github.com/',
+      linkedin: ''
   },
   {
     name: 'Maria Eduarda',
     role: 'Dev. Front-End',
     imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      'https://avatars.githubusercontent.com/Mariaduda92',
+      github: 'https://github.com/Mariaduda92',
+      linkedin: 'https://www.linkedin.com/in/maria-eduarda-araujo-de-carvalho-601272217/'
   },
   {
-    name: 'Tatiane',
+    name: 'Tatiane Viana',
     role: 'Dev. Front-End',
     imageUrl:
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+      'https://avatars.githubusercontent.com/',
+      github: 'https://github.com/',
+      linkedin: ''
   },
   // More people...
 ]
@@ -62,15 +76,23 @@ export default function Team() {
       </div>
       <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
         {people.map((person) => (
-          <li key={person.name}>
+       
+            <li key={person.name}>
             <div className="flex items-center gap-x-6">
               <img className="h-16 w-16 rounded-full" src={person.imageUrl} alt="" />
               <div>
                 <h3 className="text-base font-semibold leading-7 tracking-tight ">{person.name}</h3>
                 <p className="text-sm font-semibold leading-6 ">{person.role}</p>
+                <div className="flex gap-2 items-center">
+                <a href={person.github}><GithubIcon /></a>
+                <a href={person.linkedin}> <LinkedinIcon  size={20} /></a>
               </div>
+              </div>
+           
             </div>
+            
           </li>
+          
         ))}
       </ul>
     </div>
