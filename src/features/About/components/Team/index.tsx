@@ -45,11 +45,10 @@ const people = [
     name: 'Tatiane Viana',
     role: 'Dev. Front-End',
     imageUrl:
-      'https://avatars.githubusercontent.com/',
-      github: 'https://github.com/',
+      'https://avatars.githubusercontent.com/tayviana',
+      github: 'https://github.com/tayviana',
       linkedin: ''
   },
-  // More people...
 ]
 
 export default function Team() {
@@ -79,13 +78,13 @@ export default function Team() {
        
             <li key={person.name}>
             <div className="flex items-center gap-x-6">
-              <img className="h-16 w-16 rounded-full" src={person.imageUrl} alt="" />
+              <img className="h-16 w-16 rounded-full" src={person.imageUrl} alt={person.name} />
               <div>
                 <h3 className="text-base font-semibold leading-7 tracking-tight ">{person.name}</h3>
                 <p className="text-sm font-semibold leading-6 ">{person.role}</p>
                 <div className="flex gap-2 items-center">
                 <a href={person.github}><GithubIcon /></a>
-                <a href={person.linkedin}> <LinkedinIcon  size={20} /></a>
+                {person.linkedin && <a href={person.linkedin}> <LinkedinIcon  size={20} /></a>}
               </div>
               </div>
            

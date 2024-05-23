@@ -48,11 +48,14 @@ export const Gallery = ()=>{
       </div>
       <div className="grid gap-4">
           <div>
-          <img className="h-full object-cover max-w-full rounded-lg" src="/gallery/11.webp" alt=""/>        </div>
+            <img className="h-full object-cover max-w-full rounded-lg" src="/gallery/11.webp" alt=""/>       
+           </div>
           <div>
-          <img className="h-full object-cover max-w-full rounded-lg" src="/gallery/12.png" alt=""/>        </div>
+            <img className="h-full object-cover max-w-full rounded-lg" src="/gallery/12.png" alt=""/>        
+          </div>
           <div>
-          <img className="h-full object-cover max-w-full rounded-lg" src="/gallery/13.webp" alt=""/>        </div>
+            <img className="h-full object-cover max-w-full rounded-lg" src="/gallery/13.webp" alt=""/>        
+          </div>
       </div>
   </div>
     </div>
