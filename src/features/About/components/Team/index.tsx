@@ -31,7 +31,7 @@ const people = [
     imageUrl:
       'https://avatars.githubusercontent.com/beatizmonteiro',
       github: 'https://github.com/',
-      linkedin: ''
+      linkedin: 'https://www.linkedin.com/in/ana-beatriz-monteiro-nogueira-285b6a230/'
   },
   {
     name: 'Maria Eduarda',
@@ -47,7 +47,7 @@ const people = [
     imageUrl:
       'https://avatars.githubusercontent.com/tayviana',
       github: 'https://github.com/tayviana',
-      linkedin: ''
+      linkedin: 'https://www.linkedin.com/in/taiane-viana-da-silva-84848a310/'
   },
 ]
 
