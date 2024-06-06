@@ -18,7 +18,7 @@ export default function Home() {
         aboutLink="/#quiz"
         aboutText="Saiba mais"
         actionLink="#"
-        actionText="Cadastra-se"
+        actionText="Cadastre-se"
       />
       <Cta />
       <Gallery />
