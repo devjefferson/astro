@@ -5,7 +5,7 @@ export const button = tv({
   variants: {
     color: {
       primary:
-        "border-primary  bg-primary  text-high hover:text-high hover:border-primary/90 hover:bg-primary/90  ",
+        "border-primary  bg-primary  text-high hover:text-high hover:border-primary/90 hover:bg-primary/90 ",
       secondary:
         "border-secondary  bg-secondary  text-high hover:text-high hover:border-secondary/90 hover:bg-secondary/90",
       dark: "border-low  bg-low  text-high hover:text-low  hover:bg-high",

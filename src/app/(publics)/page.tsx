@@ -4,8 +4,10 @@ import { Cta } from "@/components/Cta";
 import { Hero } from "@/components/Hero";
 import Quiz from "@/components/Quiz";
 import { Gallery } from "@/features/Home/Gallery";
+import getCurrentUser from "@/services/auth/customer/getCurrentUser";
 
-export default function Home() {
+export default async function Home() {
+  const user = await getCurrentUser()
   return (
     <section className="scroll-smooth focus:scroll-auto">
       <Hero
@@ -15,8 +17,8 @@ export default function Home() {
       as galáxias mais distantes até os detalhes fascinantes do nosso
       próprio Sistema Solar."
         sobText="Junte-se a nós nesta jornada estelar "
-        aboutLink="/#quiz"
-        aboutText="Saiba mais"
+        aboutLink={user ? "/perfil" : '/login'}
+        aboutText={user ?  'Meu perfil' : "Entrar"}
         actionLink="#"
         actionText="Cadastre-se"
       />

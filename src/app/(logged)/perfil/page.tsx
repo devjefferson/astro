@@ -1,4 +1,4 @@
-import Perfil from "@/features/Perfil";
+import Perfil from "./__feature/Perfil";
 import getCurrentUser from "@/services/auth/customer/getCurrentUser";
 
 import { redirect } from "next/navigation";
