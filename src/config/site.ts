@@ -3,7 +3,7 @@ export const siteConfig = {
   description: "Make beautiful websites regardless of your design experience.",
   navItems: [
     {
-      label: "Inicio",
+      label: "Início",
       href: "/",
     },
     {
@@ -19,7 +19,7 @@ export const siteConfig = {
       href: "/#quiz",
     },
     {
-      label: "Sobre nos",
+      label: "Sobre nós",
       href: "/sobrenos",
     },
   ],

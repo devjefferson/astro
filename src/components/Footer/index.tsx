@@ -18,10 +18,10 @@ export const Footer = ()=>{
                 <h2 className="mb-6 text-sm font-semibold uppercase ">Links</h2>
                 <ul className=" font-medium">
                     <li className="mb-4">
-                        <a href="/" className="hover:underline">Inicio</a>
+                        <a href="/" className="hover:underline">Início</a>
                     </li>
                     <li>
-                        <a href="/sobrenos" className="hover:underline">Sobre Nos</a>
+                        <a href="/sobrenos" className="hover:underline">Sobre Nós</a>
                     </li>
                 </ul>
             </div>
