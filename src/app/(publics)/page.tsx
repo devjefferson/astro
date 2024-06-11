@@ -13,13 +13,13 @@ export default async function Home() {
       <Hero
         title="Explorando o Cosmos: Descubra os Segredos do Universo"
         description="Bem-vindo ao seu portal de astronomia, onde a curiosidade encontra
-      o conhecimento. Aqui, desvendamos os mistérios do universo, desde
-      as galáxias mais distantes até os detalhes fascinantes do nosso
-      próprio Sistema Solar."
+                  o conhecimento. Aqui, desvendamos os mistérios do universo, desde
+                  as galáxias mais distantes até os detalhes fascinantes do nosso
+                  próprio Sistema Solar."
         sobText="Junte-se a nós nesta jornada estelar "
         aboutLink={user ? "/perfil" : '/login'}
         aboutText={user ?  'Meu perfil' : "Entrar"}
-        actionLink="#"
+        actionLink="/cadastro"
         actionText="Cadastre-se"
       />
       <Cta />
@@ -38,7 +38,7 @@ export default async function Home() {
           nosso emocionante quiz! Explore o vasto cosmos enquanto responde
           perguntas desafiadoras sobre planetas, estrelas e muito mais.
         </p>
-        <Quiz />
+        <Quiz disabled={!user} />
       </div>
       <CountEvent />
     </section>

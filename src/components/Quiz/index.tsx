@@ -1,4 +1,6 @@
 "use client"
+import useMessage from "@/hooks/useMessage";
+import { useRouter } from "next/navigation";
 import React, { useState, useEffect, ChangeEvent } from "react";
 
 interface Question {
@@ -63,19 +65,22 @@ const getRandomQuestions = (
   return shuffled.slice(0, numQuestions);
 };
 
-const Quiz: React.FC = () => {
+const Quiz: React.FC<{disabled?: boolean}> = ({disabled}) => {
   const [currentStep, setCurrentStep] = useState<number>(0);
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
   const [showResults, setShowResults] = useState<boolean>(false);
   const [questions, setQuestions] = useState<Question[]>([]);
   const [numQuestions, setNumQuestions] = useState<number>(5);
   const [quizStarted, setQuizStarted] = useState<boolean>(false);
-
+  const {error} = useMessage()
+  const {push} = useRouter()
   useEffect(() => {
     if (quizStarted) {
       setQuestions(getRandomQuestions(quizQuestions, numQuestions));
     }
   }, [quizStarted, numQuestions]);
+
+  
 
   const handleOptionClick = (option: string): void => {
     const nextStep = currentStep + 1;
@@ -136,7 +141,15 @@ const Quiz: React.FC = () => {
             ))}
           </select>
           <button
-            onClick={startQuiz}
+            onClick={()=>{
+              if(disabled){
+                error('E necessário fazer login para acessar o quiz.')
+                push('/login')
+                return
+              }
+              startQuiz()
+            
+            }}
             className="w-full p-2 bg-blue-500  rounded hover:bg-blue-700 transition"
           >
             Iniciar Quiz

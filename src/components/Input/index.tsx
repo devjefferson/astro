@@ -33,7 +33,7 @@ export const Input = React.forwardRef(
           type={type}
           id={id}
           onChange={onChange}
-          className=" w-full h-14 rounded-lg outline-none border border-gray-100 focus:ring-1 focus:border-0 focus:ring-green-100 placeholder: pl-4 placeholder-transparent"
+          className=" w-full h-14 rounded-lg outline-none border border-gray-300 focus:ring-1 focus:border-0 focus:ring-green-100 placeholder: pl-4 placeholder-transparent"
           value={value}
           ref={ref}
           {...props}

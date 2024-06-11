@@ -2,7 +2,6 @@
 import { type ClassValue, clsx } from 'clsx'
 
 import { zodResolver } from '@hookform/resolvers/zod'
-import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { Controller, SubmitHandler, useForm } from 'react-hook-form'
 
@@ -11,7 +10,6 @@ import { UserLoginSchema } from './schema'
 import useMessage from '@/hooks/useMessage'
 import { Input } from '@/components/Input'
 import { Button } from '@nextui-org/button'
-import { button } from '@/components/core/button'
 import { signIn } from 'next-auth/react'
 
 
@@ -24,6 +22,11 @@ export const LoginForm = () => {
 
   const handleSubmit: SubmitHandler<any> = async (data) => {
 
+
+    if(!window.localStorage.getItem('DUSER')){
+      error("Não existe usuário temporário em nossa base de dados")
+      return
+    }
 
     const response = await signIn('credentials', {
       ...data,
@@ -89,6 +92,7 @@ export const LoginForm = () => {
         <Button
           className='rounded-md w-full'
           type="button"
+            onClick={()=> router.push('/cadastro')}
           
         >
           Me cadastrar

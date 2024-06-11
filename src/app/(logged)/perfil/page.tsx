@@ -10,5 +10,5 @@ export default async function Page() {
     redirect("/login");
     return;
   }
-  return <Perfil data={user} />;
+  return <Perfil/>;
 }
