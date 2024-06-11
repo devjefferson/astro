@@ -68,7 +68,7 @@ export const ConsumerFormEditSchema = zod.object({
   .string({ required_error: 'O campo é obrigatório.' })
   .regex(
     /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#\\$%\\^&\\*])(?=.{8,})/,
-    'Precisa conter no mínimo 8 caracteres, caixa-alta, caixa-baixa, número e um caractere especial',
+    'Precisa conter no mínimo 8 caracteres, Letra maiúsculo, letra minuscula, número e um caractere especial',
   )
   .refine((v) => !!v, 'O campo é obrigatório.'),
 passwordConfirmation: zod
