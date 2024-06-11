@@ -16,7 +16,6 @@ export default function Perfil() {
   });
 
   if(!window.localStorage.getItem('DUSER')){
-    
     error('Não existe usuário!')
     mutate()
 
