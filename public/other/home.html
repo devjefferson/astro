@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <nav class="py-0" style="position: sticky; max-width: var(--max-width-xl);">
+        <div class="flex justify-start basis-1/5 sm:basis-full">
+            <div class="flex gap-3 max-w-fit">
+                <a class="flex justify-start items-center gap-1" href="/">
+
+                    <img src="logo.png" alt="Logo" width="24" height="24">
+                    <p class="font-bold text-inherit">ASTRO</p>
+                </a>
+            </div>
+            <ul class="hidden lg:flex gap-4 justify-start ml-2">
+
+                <li><a class="text-foreground data-[active=true]:text-primary data-[active=true]:font-medium"
+                        href="#">Item 1</a></li>
+                <li><a class="text-foreground data-[active=true]:text-primary data-[active=true]:font-medium"
+                        href="#">Item 2</a></li>
+                <li><a class="text-foreground data-[active=true]:text-primary data-[active=true]:font-medium"
+                        href="#">Item 3</a></li>
+            </ul>
+        </div>
+
+        <div class="hidden sm:flex basis-1/5 sm:basis-full justify-end">
+            <div class="hidden sm:flex gap-2">
+
+                <button>ThemeSwitch</button>
+            </div>
+        </div>
+
+        <div class="sm:hidden basis-1 pl-4 flex justify-end">
+
+            <button>ThemeSwitch</button>
+
+            <button>Menu</button>
+        </div>
+
+        <div class="navbar-menu">
+
+            <input type="text" placeholder="Search">
+            <div class="mx-4 mt-2 flex flex-col gap-2">
+
+                <a class="text-foreground" href="#">Item 1</a>
+                <a class="text-primary" href="#">Item 2</a>
+                <a class="text-danger" href="#">Item 3</a>
+            </div>
+        </div>
+    </nav>
+    <div class="">
+        <div class="relative isolate px-6 pt-14 lg:px-8">
+            <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+                aria-hidden="true">
+                <div
+                    class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]">
+                </div>
+            </div>
+            <div class="mx-auto max-w-2xl py-18 lg:py-32">
+                <div class="hidden sm:mb-8 sm:flex sm:justify-center">
+                    <div
+                        class="relative rounded-full px-3 py-1 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                        Explorando o Cosmos: Descubra os Segredos do Universo
+                        <a href={aboutLink} class="font-semibold">
+                            <span class="absolute inset-0" aria-hidden="true"></span>
+                            Entrar <span aria-hidden="true">&rarr;</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <h1 class="text-4xl font-bold tracking-tight  sm:text-6xl">
+                        Participe do Nosso Quiz Astronômico!
+
+                    </h1>
+                    <p class="mt-6 text-lg leading-8 ">
+                        Claro! Aqui está um texto convidando os usuários a participarem do
+                        quiz: Participe do Nosso Quiz Astronômico! Você se considera um
+                        entusiasta do universo? Teste seus conhecimentos sobre astronomia no
+                        nosso emocionante quiz! Explore o vasto cosmos enquanto responde
+                        perguntas desafiadoras sobre planetas, estrelas e muito mais.</p>
+                    <div class="mt-10 flex items-center justify-center gap-x-6">
+                        <a href={actionLink}
+                            class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+                            Entrar
+                        </a>
+                        <a href={aboutLink} class="text-sm font-semibold leading-6 ">
+                            Quiz <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]"
+                aria-hidden="true">
+                <div
+                    class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container relative">
+        <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+            aria-hidden="true">
+            <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+                style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%);">
+            </div>
+        </div>
+        <div class="mx-auto max-w-7xl py-24 sm:px-6 sm:py-32 lg:px-8">
+            <div
+                class="relative isolate overflow-hidden bg-gray-900 px-6 pt-16 shadow-2xl sm:rounded-3xl sm:px-16 md:pt-24 lg:flex lg:gap-x-20 lg:px-24 lg:pt-0">
+                <svg viewBox="0 0 1024 1024"
+                    class="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-y-1/2 sm:left-full sm:-ml-80 lg:left-1/2 lg:ml-0 lg:-translate-x-1/2 lg:translate-y-0"
+                    aria-hidden="true">
+                    <circle cx="512" cy="512" r="512" fill="url(#759c1415-0410-454c-8f7c-9a820de03641)"
+                        fill-opacity="0.7" />
+                    <defs>
+                        <radialGradient id="759c1415-0410-454c-8f7c-9a820de03641">
+                            <stop stop-color="#7775D6" />
+                            <stop offset="1" stop-color="#E935C1" />
+                        </radialGradient>
+                    </defs>
+                </svg>
+                <div class="mx-auto max-w-md text-center lg:mx-0 lg:flex-auto lg:py-32 lg:text-left">
+                    <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                        Prepare-se para o <br />
+                        Espetáculo Celestial!
+                    </h2>
+                    <p class="mt-6 text-lg leading-8 text-gray-300">
+                        Não perca os eventos astronômicos mais aguardados do ano! Clique
+                        aqui e comece a contagem regressiva para o próximo grande evento
+                        no céu!
+                    </p>
+                    <div class="mt-10 flex items-center justify-center gap-x-6 lg:justify-start">
+                        <a href="/#quiz"
+                            class="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">
+                            Quiz
+                        </a>
+                        <a href="/#eventos" class="text-sm font-semibold leading-6 text-white">
+                            Contagem regressiva <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative mt-16 h-80 lg:mt-8">
+                    <img class="absolute left-0 top-0 w-[57rem] max-w-none rounded-md bg-white/5 ring-1 ring-white/10"
+                        src="gallery/20191008110627.jpg" alt="App screenshot" width="1824" height="1080" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="px-5 scroll-m-20 scroll-smooth" id='galeria'>
+        <div class="flex justify-center items-center flex-col text-center">
+            <h1 class="text-4xl font-bold tracking-tight  sm:text-6xl">
+                Descubra os Mistérios<br /> do Universo em <br />Nossa Galeria
+            </h1>
+            <p class="mt-6 text-lg leading-8 ">Embarque em uma jornada fascinante pelo cosmos com nossa galeria,
+                <br />repleta de imagens deslumbrantes e informações incríveis sobre o espaço.</p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 py-[64px] mb-12">
+
+            <div class="grid gap-4">
+                <div>
+                    <img class="h-full object-cover max-w-full rounded-lg" src="gallery/1.jpg" alt="" />
+                </div>
+                <div>
+                    <img class="h-full object-cover max-w-full rounded-lg" src="gallery/2.jpg" alt="" />
+                </div>
+                <div>
+                    <img class="h-full object-cover max-w-full rounded-lg" src="gallery/3.jpg" alt="" />
+                </div>
+            </div>
+            <div class="grid gap-4">
+                <div>
+                    <img class="h-full object-cover max-w-full rounded-lg" src="gallery/4.jpg" alt="" />
+                </div>
+                <div>
+                    <img class="h-full object-cover max-w-full rounded-lg" src="gallery/5.jpg" alt="" />
+                </div>
+                <div>
+                    <img class="h-full object-cover max-w-full rounded-lg" src="gallery/6.jpg" alt="" />
+                </div>
+                <div>
+                    <img class="h-full object-cover max-w-full rounded-lg" src="gallery/7.webp" alt="" />
+                </div>
+            </div>
+            <div class="grid gap-4">
+                <div>
+                    <img class="h-full object-cover max-w-full rounded-lg" src="gallery/8.webp" alt="" />
+                </div>
+                <div>
+                    <img class="h-full object-cover max-w-full rounded-lg" src="gallery/9.jpg" alt="" />
+                </div>
+                <div>
+                    <img class="h-full object-cover max-w-full rounded-lg" src="gallery/10.jpg" alt="" />
+                </div>
+            </div>
+            <div class="grid gap-4">
+                <div>
+                    <img class="h-full object-cover max-w-full rounded-lg" src="gallery/11.webp" alt="" />
+                </div>
+                <div>
+                    <img class="h-full object-cover max-w-full rounded-lg" src="gallery/12.png" alt="" />
+                </div>
+                <div>
+                    <img class="h-full object-cover max-w-full rounded-lg" src="gallery/13.webp" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class=" flex flex-col gap-4 container scroll-m-20 scroll-smooth " id="quiz">
+        <h1 class="text-4xl font-bold tracking-tight  sm:text-4xl">
+            Participe do Nosso Quiz Astronômico!
+        </h1>
+        <p>
+            Claro! Aqui está um texto convidando os usuários a participarem do
+            quiz: Participe do Nosso Quiz Astronômico! Você se considera um
+            entusiasta do universo? Teste seus conhecimentos sobre astronomia no
+            nosso emocionante quiz! Explore o vasto cosmos enquanto responde
+            perguntas desafiadoras sobre planetas, estrelas e muito mais.
+        </p>
+        <div class="flex flex-col items-center justify-center py-28 relative max-w-screen">
+            <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80"
+                aria-hidden="true">
+                <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+                    style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%);">
+                </div>
+            </div>
+            <div id="quizContainer" class="hidden w-full max-w-md p-8 bg-white shadow-md rounded-lg">
+                <h2 id="selectQuestions" class="text-2xl font-semibold mb-4">Selecione a quantidade de perguntas</h2>
+                <select id="questionSelect" class="w-full p-2 mb-4 border rounded">
+
+                </select>
+                <button id="startQuizBtn" class="w-full p-2 bg-blue-500 rounded hover:bg-blue-700 transition">Iniciar
+                    Quiz</button>
+            </div>
+        </div>
+
+    </div>
+    <div class="container relative isolate overflow-x-hidden overflow-y-hidden" id="eventos">
+        <div class="absolute inset-x-100 -top-40 -z-10 overflow-hidden blur-2xl sm:-top-40" aria-hidden="true">
+            <div class="relative right-[calc(30%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-2/3 lg:translate-x-2/3 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:right-[calc(50%-30rem)] sm:w-[72.1875rem]"
+                style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%);">
+            </div>
+        </div>
+        <div class="text-center">
+            <h1 class="text-xl font-bold tracking-tight sm:text-2xl">Acompanhe os Próximos Eventos Astronômicos:</h1>
+            <p>Os maiores eventos astronômicos do ano.</p>
+        </div>
+        <div class="py-20 sm:py-24">
+            <div class="mx-auto max-w-7xl px-6 lg:px-8">
+                <dl class="grid grid-cols-1 gap-x-8 gap-y-16 text-center lg:grid-cols-3">
+
+                </dl>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <hr class="my-6 border-gray-900/10 sm:mx-auto lg:my-8" />
+
+        <div class="mx-auto w-full p-4 py-6 lg:py-10">
+            <div class="md:flex md:justify-between container">
+                <div class="mb-6 md:mb-0">
+                    <a href="/" class="flex items-center">
+
+                        <img src="logo.png" alt="Logo" width="24" height="24">
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">ASTRO</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-2 gap-8 sm:gap-20 sm:grid-cols-3">
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold uppercase">Links</h2>
+                        <ul class="font-medium">
+                            <li class="mb-4">
+                                <a href="/" class="hover:underline">Início</a>
+                            </li>
+                            <li>
+                                <a href="/sobrenos" class="hover:underline">Sobre Nós</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold uppercase">Social Links</h2>
+                        <ul class="font-medium">
+                            <li class="mb-4">
+                                <a href="https://github.com/projeto-turma-ads/astro" class="hover:underline">Github</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/projeto-turma-ads/astro"
+                                    class="hover:underline">Instagram</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2 class="mb-6 text-sm font-semibold uppercase">Interativo</h2>
+                        <ul class="font-medium">
+                            <li class="mb-4">
+                                <a href="/#quiz" class="hover:underline">Quiz</a>
+                            </li>
+                            <li>
+                                <a href="/#eventos" class="hover:underline">Eventos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-6 border-gray-900/10 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <div class="sm:flex sm:items-center sm:justify-between container">
+                <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+                    © 2024 <a href="https://github.com/projeto-turma-ads/astro" class="hover:underline">Unisuam</a>. All
+                    Rights Reserved.
+                </span>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Dados do evento astronômico
+        const stats = [
+            { id: 1, name: "Eclipse Lunar", visible: "Visível em todo o Brasil", value: "25 Dez", date: "2024-12-25T00:00:00Z" },
+            { id: 2, name: "Chuva de Meteoros", visible: "Visível em regiões escuras", value: "13 Ago", date: "2024-08-13T00:00:00Z" },
+            { id: 3, name: "Conjunção de Júpiter e Saturno", visible: "Visível a olho nu", value: "14 Out", date: "2024-10-14T00:00:00Z" },
+        ];
+
+        // Função para calcular o countdown
+        function getCountdown(targetDate) {
+            const now = new Date().getTime();
+            const distance = new Date(targetDate).getTime() - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            return `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+
+        // Função para atualizar o countdown
+        function updateCountdowns() {
+            stats.forEach(stat => {
+                const countdownElement = document.getElementById(`countdown-${stat.id}`);
+                countdownElement.textContent = getCountdown(stat.date);
+            });
+        }
+
+        // Renderizar os eventos
+        function renderEvents() {
+            const dlElement = document.querySelector('dl');
+            stats.forEach(stat => {
+                const divElement = document.createElement('div');
+                divElement.classList.add('mx-auto', 'flex', 'max-w-xs', 'flex-col', 'gap-y-4');
+
+                divElement.innerHTML = `
+          <div>
+            <dt class="text-base leading-7">${stat.name}</dt>
+            <dt class="text-base leading-7">${stat.visible}</dt>
+          </div>
+          <dd class="order-first text-3xl font-semibold tracking-tight sm:text-5xl">${stat.value}</dd>
+          <div>
+            <span id="countdown-${stat.id}"></span>
+          </div>
+        `;
+
+                dlElement.appendChild(divElement);
+            });
+
+            // Atualiza os countdowns a cada segundo
+            setInterval(updateCountdowns, 1000);
+        }
+
+        // Chamada inicial para renderizar os eventos
+        document.addEventListener('DOMContentLoaded', renderEvents);
+    </script>
+    <script>
+        // Lógica do Quiz em JavaScript
+        document.addEventListener("DOMContentLoaded", function () {
+            const quizQuestions = [
+                {
+                    question: "Qual é o maior planeta do nosso sistema solar?",
+                    options: ["Terra", "Marte", "Júpiter", "Saturno"],
+                    answer: "Júpiter",
+                },
+                {
+                    question: "Quantos planetas existem no nosso sistema solar?",
+                    options: ["7", "8", "9", "10"],
+                    answer: "8",
+                },
+                {
+                    question: "Qual é a estrela mais próxima da Terra?",
+                    options: ["Sirius", "Alpha Centauri", "Sol", "Betelgeuse"],
+                    answer: "Sol",
+                },
+                {
+                    question: "Quem foi o primeiro homem a pisar na Lua?",
+                    options: ["Yuri Gagarin", "Buzz Aldrin", "Neil Armstrong", "Michael Collins"],
+                    answer: "Neil Armstrong",
+                },
+                {
+                    question: "Qual planeta é conhecido como o Planeta Vermelho?",
+                    options: ["Vênus", "Saturno", "Marte", "Júpiter"],
+                    answer: "Marte",
+                },
+                {
+                    question: "Qual é o nome do maior satélite natural da Terra?",
+                    options: ["Luna", "Fobos", "Deimos", "Europa"],
+                    answer: "Luna",
+                },
+                {
+                    question: "Qual planeta tem um sistema de anéis proeminente?",
+                    options: ["Mercúrio", "Saturno", "Netuno", "Urano"],
+                    answer: "Saturno",
+                },
+                {
+                    question: "Qual é o nome da galáxia em que vivemos?",
+                    options: ["Andrômeda", "Via Láctea", "Sombrero", "Triangulum"],
+                    answer: "Via Láctea",
+                },
+            ];
+
+            let currentStep = 0;
+            let selectedOptions = [];
+            let showResults = false;
+            let questions = [];
+            let numQuestions = 5;
+            let quizStarted = false;
+
+            function getRandomQuestions(questions, numQuestions) {
+                const shuffled = questions.sort(() => 0.5 - Math.random());
+                return shuffled.slice(0, numQuestions);
+            }
+
+            function handleOptionClick(option) {
+                const nextStep = currentStep + 1;
+                selectedOptions = [...selectedOptions, option];
+
+                if (nextStep < questions.length) {
+                    currentStep = nextStep;
+                } else {
+                    showResults = true;
+                }
+                renderQuiz();
+            }
+
+            function handleRestartQuiz() {
+                currentStep = 0;
+                selectedOptions = [];
+                showResults = false;
+                quizStarted = false;
+                renderQuiz();
+            }
+
+            function startQuiz() {
+                quizStarted = true;
+                setQuestions(getRandomQuestions(quizQuestions, numQuestions));
+                renderQuiz();
+            }
+
+            function handleNumQuestionsChange(event) {
+                numQuestions = Number(event.target.value);
+            }
+
+            function renderQuiz() {
+                const quizContainer = document.getElementById("quizContainer");
+                const selectQuestions = document.getElementById("selectQuestions");
+                const questionSelect = document.getElementById("questionSelect");
+                const startQuizBtn = document.getElementById("startQuizBtn");
+
+                if (!quizStarted) {
+                    quizContainer.classList.remove("hidden");
+                    selectQuestions.textContent = "Selecione a quantidade de perguntas";
+                    questionSelect.innerHTML = "";
+                    quizQuestions.forEach((_, index) => {
+                        const option = document.createElement("option");
+                        option.value = index + 1;
+                        option.textContent = index + 1;
+                        questionSelect.appendChild(option);
+                    });
+                    startQuizBtn.textContent = "Iniciar Quiz";
+                    startQuizBtn.addEventListener("click", startQuiz);
+                } else if (!showResults) {
+                    const currentQuestion = questions[currentStep];
+                    quizContainer.classList.remove("hidden");
+                    selectQuestions.textContent = currentQuestion.question;
+                    questionSelect.innerHTML = "";
+                    currentQuestion.options.forEach((option, index) => {
+                        const button = document.createElement("button");
+                        button.textContent = option;
+                        button.classList.add("w-full", "p-2", "bg-blue-500", "text-white", "rounded", "hover:bg-blue-700", "transition");
+                        button.addEventListener("click", () => handleOptionClick(option));
+                        questionSelect.appendChild(button);
+                    });
+                } else {
+                    quizContainer.classList.remove("hidden");
+                    selectQuestions.textContent = "Resultados";
+                    questionSelect.innerHTML = "";
+                    const resultsList = document.createElement("ul");
+                    resultsList.classList.add("space-y-4");
+                    questions.forEach((question, index) => {
+                        const listItem = document.createElement("li");
+                        const questionHeader = document.createElement("h3");
+                        questionHeader.textContent = question.question;
+                        questionHeader.classList.add("text-lg", "font-medium");
+                        listItem.appendChild(questionHeader);
+                        const userAnswer = document.createElement("p");
+                        userAnswer.textContent = `Sua resposta: ${selectedOptions[index]}`;
+                        userAnswer.classList.add("p-2", "rounded");
+                        if (selectedOptions[index] === question.answer) {
+                            userAnswer.classList.add("bg-green-200");
+                        } else {
+                            userAnswer.classList.add("bg-red-200");
+                            const correctAnswer = document.createElement("p");
+                            correctAnswer.textContent = `Resposta correta: ${question.answer}`;
+                            correctAnswer.classList.add("p-2", "bg-green-200", "rounded");
+                            listItem.appendChild(correctAnswer);
+                        }
+                        listItem.appendChild(userAnswer);
+                        resultsList.appendChild(listItem);
+                    });
+                    questionSelect.appendChild(resultsList);
+                    startQuizBtn.textContent = "Reiniciar Quiz";
+                    startQuizBtn.removeEventListener("click", startQuiz);
+                    startQuizBtn.addEventListener("click", handleRestartQuiz);
+                }
+            }
+
+            // Chamada inicial para renderizar o quiz
+            renderQuiz();
+        });
+    </script>
+</body>
+
+</html>
