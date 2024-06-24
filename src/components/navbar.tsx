@@ -22,14 +22,15 @@ import { siteConfig } from "@/config/site";
 import Menu from "./Menu";
 import { useEffect, useState } from "react";
 
-export const Navbar = () => {
+export const Navbar = ({data}:{data?: any}) => {
   const [user, setUser] = useState()
 
 
+
   useEffect(()=>{
-    const data = localStorage.getItem('DUSER')
-    if(!data) return 
-    setUser(JSON.parse(data))
+    const response = localStorage.getItem('DUSER')
+    if(!response) return 
+    setUser(JSON.parse(response))
 
   },[])
   
@@ -89,7 +90,7 @@ export const Navbar = () => {
         <ThemeSwitch />
         
         </NavbarItem>
-        <Menu data={user as any}/>
+        {data && <Menu data={ user as any}/>}
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
