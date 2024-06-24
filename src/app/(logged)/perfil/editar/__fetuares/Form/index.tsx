@@ -17,14 +17,15 @@ import useMessage from '@/hooks/useMessage'
 export default function ConsumerForm() {
   const { back, push } = useRouter()
   const {success} = useMessage()
-  console.log()
+  const data =  localStorage.getItem('DUSER') as string
   const form = useForm<TCustomer>({
     resolver: zodResolver(ConsumerFormEditSchema),
-    defaultValues: JSON.parse(localStorage.getItem('DUSER') as string),
+    defaultValues: JSON.parse(data) || {} ,
   })
 
   const handleSubmit: SubmitHandler<TCustomer> = async (data) => {
    localStorage.setItem('DUSER', JSON.stringify(data))
+
     success("cadastrado realizado com sucesso.")
     push('/login')
   }
