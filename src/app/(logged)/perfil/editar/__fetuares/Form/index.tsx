@@ -21,7 +21,9 @@ export default function ConsumerForm() {
   const [user, setUser] = useState()
   const form = useForm<TCustomer>({
     resolver: zodResolver(ConsumerFormEditSchema),
-    defaultValues: user  || {} ,
+    defaultValues: {
+
+    },
   })
 
   const handleSubmit: SubmitHandler<TCustomer> = async (data) => {
@@ -29,10 +31,29 @@ export default function ConsumerForm() {
     success("cadastrado realizado com sucesso.")
     push('/login')
   }
+
   useEffect(()=>{
     const data =  localStorage.getItem('DUSER') as string
-    
-    setUser(JSON.parse(data || ''))
+
+    form.setValue('name', JSON.parse(data || '').name)
+    form.setValue('surname', JSON.parse(data || '').surname)
+    form.setValue('cpf', JSON.parse(data || '').cpf)
+    form.setValue('birthdate', JSON.parse(data || '').birthdate)
+    form.setValue('city', JSON.parse(data || '').city)
+    form.setValue('complement', JSON.parse(data || '').complement)
+    form.setValue('district', JSON.parse(data || '').district)
+    form.setValue('gender', JSON.parse(data || '').gender)
+    form.setValue('email', JSON.parse(data || '').email)
+    form.setValue('phone', JSON.parse(data || '').phone)
+    form.setValue('district', JSON.parse(data || '').district)
+    form.setValue('zipCode', JSON.parse(data || '').zipCode)
+    form.setValue('street', JSON.parse(data || '').street)
+    form.setValue('district', JSON.parse(data || '').district)
+    form.setValue('number', JSON.parse(data || '').number)
+    form.setValue('state', JSON.parse(data || '').state)
+ 
+
+   
   },[])
 
 

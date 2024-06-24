@@ -72,8 +72,8 @@ export default function Menu({ data }: { data: TUser }) {
             color="danger"
             onClick={() => {
               signOut();
-             
-              router.push('login')
+            
+              router.push('/login')
             }}
           >
             Sair

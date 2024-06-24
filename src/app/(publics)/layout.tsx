@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Navbar } from "@/components/navbar";
 import { Footer } from "@/components/Footer";
+import getCurrentUser from "@/services/auth/customer/getCurrentUser";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,9 +24,11 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const [user] = await Promise.all([await getCurrentUser()]);
+
   return (
     <>
-      <Navbar />
+      <Navbar  data={user}/>
       {children}
       <Footer />
     </>
