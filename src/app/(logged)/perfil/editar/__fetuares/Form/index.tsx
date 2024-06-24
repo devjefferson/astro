@@ -20,11 +20,11 @@ export default function ConsumerForm() {
   console.log()
   const form = useForm<TCustomer>({
     resolver: zodResolver(ConsumerFormEditSchema),
-    defaultValues: JSON.parse(window.localStorage.getItem('DUSER') as string),
+    defaultValues: JSON.parse(localStorage.getItem('DUSER') as string),
   })
 
   const handleSubmit: SubmitHandler<TCustomer> = async (data) => {
-    window.localStorage.setItem('DUSER', JSON.stringify(data))
+   localStorage.setItem('DUSER', JSON.stringify(data))
     success("cadastrado realizado com sucesso.")
     push('/login')
   }
