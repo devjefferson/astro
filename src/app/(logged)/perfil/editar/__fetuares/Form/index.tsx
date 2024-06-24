@@ -11,24 +11,30 @@ import { TCustomer } from '@/models/customer'
 import { Input } from '@/components/Input'
 import { title } from '@/components/primitives'
 import useMessage from '@/hooks/useMessage'
+import { useEffect, useState } from 'react'
 
 
 
 export default function ConsumerForm() {
   const { back, push } = useRouter()
   const {success} = useMessage()
-  const data =  localStorage.getItem('DUSER') as string
+  const [user, setUser] = useState()
   const form = useForm<TCustomer>({
     resolver: zodResolver(ConsumerFormEditSchema),
-    defaultValues: JSON.parse(data) || {} ,
+    defaultValues: user  || {} ,
   })
 
   const handleSubmit: SubmitHandler<TCustomer> = async (data) => {
    localStorage.setItem('DUSER', JSON.stringify(data))
-
     success("cadastrado realizado com sucesso.")
     push('/login')
   }
+  useEffect(()=>{
+    const data =  localStorage.getItem('DUSER') as string
+    
+    setUser(JSON.parse(data || ''))
+  },[])
+
 
   return (
     <div className='py-16'>
