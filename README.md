@@ -45,6 +45,7 @@ Este site tem como objetivo fornecer informações sobre diversos tópicos relac
 - [Jefferson Fonseca](https://github.com/devjefferson)
 - [Beatriz](https://github.com/beatizmonteiro)
 - [Maria Eduarda](https://github.com/mariaduda92)
+- [Taiane Viana](https://github.com/tayviana)
 
 
 

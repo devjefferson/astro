@@ -19,8 +19,8 @@ export default async function Home() {
         sobText="Junte-se a nós nesta jornada estelar "
         aboutLink={user ? "/perfil" : '/login'}
         aboutText={user ?  'Meu perfil' : "Entrar"}
-        actionLink="/cadastro"
-        actionText="Cadastre-se"
+        actionLink={user ?  '/#quiz' : "/cadastro"}
+        actionText={user ?  'Ir para o Quiz' : "Cadastre-se"}
       />
       <Cta />
       <Gallery />

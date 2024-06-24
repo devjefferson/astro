@@ -29,10 +29,10 @@ export const Footer = ()=>{
                 <h2 className="mb-6 text-sm font-semibold uppercase ">Social Links</h2>
                 <ul className=" font-medium">
                     <li className="mb-4">
-                        <a href="https://github.com/projeto-turma-ads/astro" className="hover:underline ">Github</a>
+                        <a href="https://github.com/devjefferson/astro" className="hover:underline ">Github</a>
                     </li>
                     <li>
-                        <a href="https://github.com/projeto-turma-ads/astro" className="hover:underline">Instagram</a>
+                        <a href="https://github.com/devjefferson/astro" className="hover:underline">Instagram</a>
                     </li>
                 </ul>
             </div>
@@ -51,7 +51,7 @@ export const Footer = ()=>{
     </div>
     <hr className="my-6 border-gray-900/10 sm:mx-auto dark:border-gray-700 lg:my-8" />
     <div className="sm:flex sm:items-center sm:justify-between container">
-        <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://github.com/projeto-turma-ads/astro" className="hover:underline">Unisuam</a>. All Rights Reserved.
+        <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2024 <a href="https://github.com/devjefferson/astro" className="hover:underline">Unisuam</a>. All Rights Reserved.
         </span>
      
     </div>

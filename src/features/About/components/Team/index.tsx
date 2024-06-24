@@ -42,7 +42,7 @@ const people = [
       linkedin: 'https://www.linkedin.com/in/maria-eduarda-araujo-de-carvalho-601272217/'
   },
   {
-    name: 'Tatiane Viana',
+    name: 'Taiane Viana',
     role: 'Dev. Front-End',
     imageUrl:
       'https://avatars.githubusercontent.com/tayviana',
