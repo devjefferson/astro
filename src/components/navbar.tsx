@@ -1,3 +1,5 @@
+'use client'
+
 import { Input } from "@nextui-org/input";
 import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
@@ -17,8 +19,20 @@ import NextLink from "next/link";
 import { SearchIcon, Logo } from "@/components/icons";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { siteConfig } from "@/config/site";
+import Menu from "./Menu";
+import { useEffect, useState } from "react";
 
 export const Navbar = () => {
+  const [user, setUser] = useState()
+
+
+  useEffect(()=>{
+    const data = localStorage.getItem('DUSER')
+    if(!data) return 
+    setUser(JSON.parse(data))
+
+  },[])
+  
   const searchInput = (
     <Input
       aria-label="Search"
@@ -72,12 +86,15 @@ export const Navbar = () => {
         justify="end"
       >
         <NavbarItem className="hidden sm:flex gap-2">
-          <ThemeSwitch />
+        <ThemeSwitch />
+        
         </NavbarItem>
+        <Menu data={user as any}/>
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
         <ThemeSwitch />
+
         <NavbarMenuToggle />
       </NavbarContent>
 

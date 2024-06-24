@@ -74,6 +74,7 @@ const Quiz: React.FC<{disabled?: boolean}> = ({disabled}) => {
   const [quizStarted, setQuizStarted] = useState<boolean>(false);
   const {error} = useMessage()
   const {push} = useRouter()
+
   useEffect(() => {
     if (quizStarted) {
       setQuestions(getRandomQuestions(quizQuestions, numQuestions));
@@ -85,6 +86,8 @@ const Quiz: React.FC<{disabled?: boolean}> = ({disabled}) => {
   const handleOptionClick = (option: string): void => {
     const nextStep = currentStep + 1;
     setSelectedOptions([...selectedOptions, option]);
+
+    console.log(option)
 
     if (nextStep < questions.length) {
       setCurrentStep(nextStep);
@@ -178,21 +181,34 @@ const Quiz: React.FC<{disabled?: boolean}> = ({disabled}) => {
         <div className="w-full max-w-md p-8 bg-white shadow-md rounded-lg text-black">
           <h2 className="text-2xl font-semibold mb-4">Resultados</h2>
           <ul className="space-y-4">
-            {questions.map((question, index) => (
-              <li key={index}>
-                <h3 className="text-lg font-medium">{question.question}</h3>
-                <p
-                  className={`p-2 rounded ${selectedOptions[index] === question.answer ? "bg-green-200" : "bg-red-200"}`}
-                >
-                  Sua resposta: {selectedOptions[index]}
-                </p>
-                {selectedOptions[index] !== question.answer && (
-                  <p className="p-2 bg-green-200 rounded">
-                    Resposta correta: {question.answer}
+            {questions.map((question, index) =>{
+
+              if(selectedOptions[index] === question.answer){
+                const atual = localStorage.getItem('POINT') || "0"
+                localStorage.setItem('POINT', String(Number(atual) + 1))
+              }
+
+              if(selectedOptions[index] !== question.answer){
+                const atual = localStorage.getItem('ERROR') || "0"
+                localStorage.setItem('ERROR', String(Number(atual) + 1))
+              }
+
+              return  (
+                <li key={index}>
+                  <h3 className="text-lg font-medium">{question.question}</h3>
+                  <p
+                    className={`p-2 rounded ${selectedOptions[index] === question.answer ? "bg-green-200" : "bg-red-200"}`}
+                  >
+                    Sua resposta: {selectedOptions[index]}
                   </p>
-                )}
-              </li>
-            ))}
+                  {selectedOptions[index] !== question.answer && (
+                    <p className="p-2 bg-green-200 rounded">
+                      Resposta correta: {question.answer}
+                    </p>
+                  )}
+                </li>
+              )
+            })}
           </ul>
           <button
             onClick={handleRestartQuiz}

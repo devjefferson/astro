@@ -16,7 +16,7 @@ export default async function Home() {
                   o conhecimento. Aqui, desvendamos os mistérios do universo, desde
                   as galáxias mais distantes até os detalhes fascinantes do nosso
                   próprio Sistema Solar."
-        sobText="Junte-se a nós nesta jornada estelar "
+        sobText="Junte-se a nós nesta jornada estelar"
         aboutLink={user ? "/perfil" : '/login'}
         aboutText={user ?  'Meu perfil' : "Entrar"}
         actionLink={user ?  '/#quiz' : "/cadastro"}
