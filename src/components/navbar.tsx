@@ -1,7 +1,5 @@
 'use client'
 
-import { Input } from "@nextui-org/input";
-import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
 import {
   Navbar as NextUINavbar,
@@ -16,7 +14,7 @@ import { link as linkStyles } from "@nextui-org/theme";
 import clsx from "clsx";
 import NextLink from "next/link";
 
-import { SearchIcon, Logo } from "@/components/icons";
+import {  Logo } from "@/components/icons";
 import { ThemeSwitch } from "@/components/theme-switch";
 import { siteConfig } from "@/config/site";
 import Menu from "./Menu";
@@ -34,26 +32,7 @@ export const Navbar = ({data}:{data?: any}) => {
 
   },[])
   
-  const searchInput = (
-    <Input
-      aria-label="Search"
-      classNames={{
-        inputWrapper: "bg-default-100",
-        input: "text-sm",
-      }}
-      endContent={
-        <Kbd className="hidden lg:inline-block" keys={["command"]}>
-          K
-        </Kbd>
-      }
-      labelPlacement="outside"
-      placeholder="Search..."
-      startContent={
-        <SearchIcon className="text-base text-default-400 pointer-events-none flex-shrink-0" />
-      }
-      type="search"
-    />
-  );
+ 
 
   return (
     <NextUINavbar maxWidth="xl" position="sticky" className="py-0">
@@ -64,7 +43,9 @@ export const Navbar = ({data}:{data?: any}) => {
             <p className="font-bold text-inherit">ASTRO</p>
           </NextLink>
         </NavbarBrand>
+        
         <ul className="hidden lg:flex gap-4 justify-start ml-2">
+          
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
@@ -100,7 +81,10 @@ export const Navbar = ({data}:{data?: any}) => {
       </NavbarContent>
 
       <NavbarMenu>
-        {searchInput}
+      <div>
+      {data && <Menu data={ user as any}/>}
+      </div>
+
         <div className="mx-4 mt-2 flex flex-col gap-2">
           {siteConfig.navItems.map((item, index) => (
             <NavbarMenuItem key={`${item}-${index}`}>
@@ -120,7 +104,9 @@ export const Navbar = ({data}:{data?: any}) => {
             </NavbarMenuItem>
           ))}
         </div>
+        
       </NavbarMenu>
+      
     </NextUINavbar>
   );
 };
