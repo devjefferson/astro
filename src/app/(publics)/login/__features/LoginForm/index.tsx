@@ -48,7 +48,7 @@ export const LoginForm = () => {
       className={clsx(['flex', 'flex-col', 'gap-8', 'max-w-96'])}
       onSubmit={form.handleSubmit(handleSubmit)}
     >
-      <div className="md:flex gap-8 flex-col">
+      <div className="md:flex gap-8 flex-col px-6">
         <div className="flex-1">
           <Controller
             control={form.control}
